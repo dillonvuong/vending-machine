@@ -11,6 +11,23 @@ router.get('/', async (req, res) => {
     }
 })
 
+
+// Buying One
+router.patch('/buy/:id', getSoda, async (req, res) => {
+    if (res.soda.maxQuantity != 0){
+        res.soda.maxQuantity = res.soda.maxQuantity - 1
+    }
+    try {
+        await res.soda.save()
+        const file = `${appRoot}/public/Fizz.json`;
+        // console.log(file)
+        res.download(file)
+        res.json({name: res.soda.name, description: res.soda.description})
+    } catch (err) {
+        res.status(400).json({message: err.message})
+    }
+})
+
 // Getting One
 router.get('/:id', getSoda, (req, res) => {
     res.json(res.soda)
@@ -74,7 +91,7 @@ async function getSoda(req, res, next) {
     } catch (err) {
         return res.status(500).json({message: err.message})
     }
-    res.soda = soda // this code here is the res.soda above 
+    res.soda = soda 
     next()
 }
 

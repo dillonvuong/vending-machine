@@ -19,10 +19,12 @@ Content-Type: application/json
 DELETE http://localhost:3000/sodas/62787eea167b295dfb73173c
 
 ###
-PATCH http://localhost:3000/subscribers/6276f5018ba936508b214532
+PATCH http://localhost:8080/buy/6275e1584b001044c692e1d6
 Content-Type: application/json
 
 {
     "name": "123",
     "subscribedToChannel": "SWE CHILL"
 }
+
+

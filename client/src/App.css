@@ -38,5 +38,34 @@
 }
 
 .VendingMachine {
-  /* background-color:red */
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+.SodaDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BuyButton {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 15px 25px;
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+
+.BuyButton:hover{
+  background-color: bisque;
+}
+.BuyButton:disabled{
+  background-color: gray;
 }

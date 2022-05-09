@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
-import DataFetching from './components/DataFetching';
+import VendingMachine from './components/VendingMachine';
 
 function App() {
   return (
     <div className="VendingMachine">
-      <DataFetching/>
+      <VendingMachine/>
     </div>
   );
 }
