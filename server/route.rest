@@ -1,0 +1,28 @@
+GET http://localhost:3000/sodas
+
+###
+
+GET http://localhost:3000/subscribers/6276ee3ee5ee905bf64bb02b
+
+###
+
+POST http://localhost:3000/sodas
+Content-Type: application/json
+
+{
+    "name": "Amazing Person",
+    "description": "vexus",
+    "cost": "1"
+}
+
+###
+DELETE http://localhost:3000/sodas/62787eea167b295dfb73173c
+
+###
+PATCH http://localhost:3000/subscribers/6276f5018ba936508b214532
+Content-Type: application/json
+
+{
+    "name": "123",
+    "subscribedToChannel": "SWE CHILL"
+}
